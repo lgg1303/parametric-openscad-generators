@@ -1,3 +1,4 @@
+//Quality
 $fn = 64;
 
 module plate(x = 50, y = 50, z = 5, r_corner = 5){
@@ -62,5 +63,6 @@ module assembly(
         }
     }
     
+//build
     
-assembly(r_corner = 15,dist_border_x = 10,slot_length = 0);  //slot_length = 0) for no slot
+assembly(r_corner = 10,dist_border_x = 10,slot_length = 0);  //slot_length = 0) for no slot
