@@ -18,9 +18,7 @@ bolt_hole_diameter = 5.5;
 outer_chamfer = 1.0;
 hole_chamfer = 0.6;
 
-// -------------------------
 // Build
-// -------------------------
 
 flange(
     outer_diameter = outer_diameter,
