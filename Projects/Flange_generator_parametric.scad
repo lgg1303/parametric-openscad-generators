@@ -97,7 +97,7 @@ module flange(
             bolt_count = bolt_count,
             bolt_circle_diameter = bolt_circle_diameter,
             bolt_hole_diameter = bolt_hole_diameter,
-            h = thickness + 2,
+            h = thickness + 3,
             hole_chamfer = hole_chamfer,
             part_thickness = thickness
         );
