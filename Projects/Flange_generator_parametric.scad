@@ -5,6 +5,8 @@ $fn = 96;
 // Main parameters
 // -------------------------
 
+eps = 0.01;
+
 outer_diameter = 80;
 thickness = 8;
 
@@ -107,30 +109,32 @@ module flange(
 // Flange body with outside chamfer
 
 module flange_body(d = 80, h = 8, chamfer = 1) {
-    
+
+    eps = 0.01;
+
     if (chamfer > 0) {
         union() {
-            
+
             // Main straight section
             cylinder(
-                h = h - 2 * chamfer,
+                h = h - 2 * chamfer + 2 * eps,
                 d = d,
                 center = true
             );
-            
+
             // Top chamfer
             translate([0, 0, h / 2 - chamfer / 2])
                 cylinder(
-                    h = chamfer,
+                    h = chamfer + eps,
                     d1 = d,
                     d2 = d - 2 * chamfer,
                     center = true
                 );
-            
+
             // Bottom chamfer
             translate([0, 0, -h / 2 + chamfer / 2])
                 cylinder(
-                    h = chamfer,
+                    h = chamfer + eps,
                     d1 = d - 2 * chamfer,
                     d2 = d,
                     center = true
@@ -144,7 +148,6 @@ module flange_body(d = 80, h = 8, chamfer = 1) {
         );
     }
 }
-
 
 // Center hole with optional chamfer
 
@@ -211,20 +214,30 @@ module bolt_circle_holes(
 
 
 module hole_chamfers(d = 5, chamfer = 0.5, part_thickness = 8) {
-    
+
+    eps = 0.01;
+
     // Top chamfer cutter
-    translate([0, 0, part_thickness / 2 - chamfer / 2])
+    translate([
+        0,
+        0,
+        part_thickness / 2 - chamfer / 2 + eps / 2
+    ])
         cylinder(
-            h = chamfer,
+            h = chamfer + eps,
             d1 = d,
             d2 = d + 2 * chamfer,
             center = true
         );
-    
+
     // Bottom chamfer cutter
-    translate([0, 0, -part_thickness / 2 + chamfer / 2])
+    translate([
+        0,
+        0,
+        -part_thickness / 2 + chamfer / 2 - eps / 2
+    ])
         cylinder(
-            h = chamfer,
+            h = chamfer + eps,
             d1 = d + 2 * chamfer,
             d2 = d,
             center = true
