@@ -14,7 +14,7 @@ The models are controlled through configurable parameters, allowing their dimens
 
 ### Parametric Electronics Enclosure
 
-![Parametric electronics enclosure](images/electronics-enclosure.png)
+![Parametric electronics enclosure](Images/electronics-enclosure.png)
 
 A configurable enclosure designed for electronic components and rapid prototyping.
 
@@ -28,7 +28,7 @@ Configurable properties include:
 
 ### Parametric Flange Generator
 
-![Parametric flange generator](images/flange-generator.png)
+![Parametric flange generator](Images/flange-generator.png)
 
 A configurable generator for circular flanges.
 
@@ -43,7 +43,7 @@ Configurable properties include:
 
 ### Parametric Mounting Plate
 
-![Parametric mounting plate](images/mounting-plate.png)
+![Parametric mounting plate](Images/mounting-plate.png)
 
 A configurable mounting plate generator with customizable dimensions and hole patterns.
 
